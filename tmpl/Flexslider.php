@@ -17,13 +17,10 @@ $tz_autoslide = $params->get('tz_autoslide');
 $tz_speed = $params->get('tz_slideSpeed','7000');
 $tz_anispeed = $params->get('tz_speed','1000');
 $tz_direction = $params->get('tz_direction_slide');
-$flex_width = $params->get('flex_width',1500);
+$flex_width = $params->get('flex_width',900);
 $flex_thumb = $params->get('flex_thumb','true');
-$flex_overlay = $params->get('flex_overlay','true');
 $flex_width_thumb = $params->get('flex_width_thumb','300');
 $flex_bottom_thumb = $params->get('flex_bottom_thumb','-85');
-$flex_height = $params->get('flex_height','744');
-$flex_opacity = $params->get('flex_overlay_opacity','0.3');
 $flex_loop = $params->get('flex_loop','true');
 $document   =   JFactory::getDocument();
 $document->addStyleSheet('modules/mod_tz_multi_slideshow/css/flexslider.css');
@@ -36,11 +33,8 @@ $document->addStyleDeclaration('
     #carousel{
     bottom:'.$flex_bottom_thumb.'px !important;
     }
-    #tz_Flexslider, #slider, #tz_Flexslider #slider .slides .info_slide{
-    max-height: '.$flex_height.'px;
-    }
-    .bg-slide-overlay{
-    opacity:'.$flex_opacity.';
+    #tz_Flexslider{
+        width:'.$flex_width.'px;
     }
 ');
 
@@ -116,7 +110,7 @@ $document->addStyleDeclaration('
     jQuery(window).load(function(){
         jQuery('#carousel').flexslider({
             animation: "slide",
-            controlNav: true,
+            controlNav: false,
             animationLoop:false,
             slideshow: true,
             itemWidth: <?php echo $flex_width_thumb;?>,

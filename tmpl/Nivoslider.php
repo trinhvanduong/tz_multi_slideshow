@@ -18,9 +18,10 @@ $nivo_pause = $params->get('nivo_pause','3000');
 $nivo_direction = $params->get('nivo_directionNav','true');
 $nivo_width = $params->get('nivo_width',1500);
 $nivo_bottom = $params->get('nivo_bottom','85');
-$nivo_height = $params->get('nivo_height','744');
 $themes = $params->get('nivo_theme','default');
-$nivo_opacity = $params->get('nivo_opacity','0.3');
+$nivo_start = $params->get('nivo_start',0);
+$nivo_controlNav = $params->get('nivo_controlNav','true');
+$nivo_pauseOnHover = $params->get('nivo_pauseOnHover','true');
 
 $document   =   JFactory::getDocument();
 $document->addStyleSheet('modules/mod_tz_multi_slideshow/css/nivo-slider.css');
@@ -30,12 +31,7 @@ $document->addStyleDeclaration('
     .slider-wrapper {
     width:'.$nivo_width.'px;
     }
-   .slider-wrapper #slider{
-    height: '.$nivo_height.'px;
-    }
-    .nivo-overlay{
-        opacity:'.$nivo_opacity.';
-    }
+
 ');
 
 ?>
@@ -85,10 +81,11 @@ $document->addStyleDeclaration('
         jQuery('#slider').nivoSlider({
             effect: '<?php echo $nivo_effect; ?>',
             directionNav: <?php echo $nivo_direction; ?> ,
-            controlNav: false,
-            pauseOnHover: true,
+            controlNav: <?php echo $nivo_controlNav; ?> ,
+            pauseOnHover: <?php echo $nivo_pauseOnHover; ?>,
             animSpeed: <?php echo $nivo_speed; ?>,
-            pauseTime: <?php echo $nivo_pause;?>
+            pauseTime: <?php echo $nivo_pause;?>,
+            startSlide: <?php echo $nivo_start;?>
         });
     });
 </script>

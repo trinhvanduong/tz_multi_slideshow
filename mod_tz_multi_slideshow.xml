@@ -2,7 +2,7 @@
 <extension type="module" version="1.7" client="site"
 	method="upgrade"
 >
-	<name>TZ MULTI SLIDESHOW </name>
+	<name>TZ Multi Slideshow</name>
 	<author>Templaza.,JSC</author>
 	<creationDate>September 2013</creationDate>
 	<copyright>Copyright (C) 2011 Templaza.,JSC. All Rights Reserved.</copyright>
@@ -47,7 +47,7 @@
                 <option value="L">Large</option>
                 <option value="XL">Xlarge</option>
             </field>
-            <field name="image_thumb" type="list" default="XS" label=" BASE_IMAGE_THUMBNAIL" description="BASE_IMAGE_THUMBNAIL">
+            <field name="image_thumb" type="list" default="XS" label="BASE_IMAGE_THUMBNAIL" description="BASE_IMAGE_THUMBNAIL_DES">
                 <option value="XS">Xsmall</option>
                 <option value="S">Small</option>
                 <option value="M">Medium</option>
@@ -102,17 +102,18 @@
         <fieldset name="Zoom_slider">
             <field type="text" name="zoom_width" label="ZOOM_WIDTH" description="ZOOM_WIDTH_DES"/>
             <field type="text" name="zoom_height" label="ZOOM_HEIGHT" description="ZOOM_HEIGHT_DES"/>
+            <field type="text" name="zoom_time" multiple="ZOOM_TIME" description="ZOOM_TIME_DES" default="6"/>
 
-            <field name="zoom_overlay" type="radio" class="btn-group" label="ZOOM_SHOW_OVERLAY" default="true" size="30" description="" >
-                <option value="true">Yes</option>
-                <option value="false">No</option>
-            </field>
+            <field type="text" name="zoom_top" multiple="ZOOM_TOP" description="ZOOM_TOP_DES" default="-200"/>
+            <field type="text" name="zoom_right" multiple="ZOOM_RIGHT" description="ZOOM_RIGHT_DES" default="-200"/>
+            <field type="text" name="zoom_bottom" multiple="ZOOM_BOTTOM" description="ZOOM_BOTTOM_DES" default="-200"/>
+            <field type="text" name="zoom_left" multiple="ZOOM_LEFT" description="ZOOM_LEFT_DES" default="-200"/>
+
 
         </fieldset>
 
         <fieldset name="Flex_slider">
-            <field name="flex_width" type="text" label="FLEX_WIDTH" default="1500"  class="btn-group"  size="30" description="" />
-            <field name="flex_height" type="text" label="FLEX_HEIGHT" default="744"  class="btn-group"  size="30" description="" />
+            <field name="flex_width" type="text" label="FLEX_WIDTH" default="900"  class="btn-group"  size="30" description="" />
             <field name="tz_autoslide" type="radio" class="btn-group" label="FLEX_AUTO_SLIDE" default="true" size="30" description="" >
                 <option value="true">Yes</option>
                 <option value="false">No</option>
@@ -134,7 +135,7 @@
             <field name="tz_slideSpeed" type="text" label="FLEX_SLIDE_SPEED" default="7000"  class="btn-group"  size="30" description="" />
             <field name="tz_speed" type="text" label="FLEX_ANIMATION_SPEED" default="1000"  class="btn-group"  size="30" description="" />
 
-            <field name="flex_bottom_thumb" type="text" label="FLEX_THUMB_BOTTOM" default="-85"  class="btn-group"  size="30" description="position thumb slider example -85" />
+            <field name="flex_bottom_thumb" type="text" label="FLEX_THUMB_BOTTOM" default="0"  class="btn-group"  size="30" description="position thumb slider example -50" />
             <field name="flex_width_thumb" type="text" label="FLEX_THUMB_WIDTH" default="300"  class="btn-group"  size="30" description="" />
 
             <field name="flex_loop" type="radio" label="FLEX_LOOP" default="true"  class="btn-group"  size="30" description="">
@@ -142,16 +143,9 @@
                 <option value="false">No</option>
             </field>
 
-            <field name="flex_overlay" type="radio" label="FLEX_SHOW_OVERLAY" default="true"  class="btn-group"  size="30" description="">
-                <option value="true">Yes</option>
-                <option value="false">No</option>
-            </field>
-
-            <field name="flex_overlay_opacity" type="text" label="FLEX_OVERLAY_OPACITY" default="0.3"   size="30" description="" />
         </fieldset>
         <fieldset name="nivoslider">
             <field name="nivo_width" type="text" default="1500" label="NIVO_WIDTH"/>
-            <field name="nivo_height" type="text" default="744" label="NIVO_HEIGHT"/>
             <field type="list" name="nivo_theme" default="default"
                    label="NIVO_THEMES">
                 <option value="default">Default</option>
@@ -169,14 +163,21 @@
                 <option value="boxRain">Box Rain</option>
                 <option value="boxRainGrowReverse">Box Rain GrowReverse</option>
             </field>
-
             <field name="nivo_speed" type="text" default="500" label="NIVO_SPEED"/>
             <field name="nivo_pause" type="text" default="3000" label="NIVO_PAUSE"/>
             <field name="nivo_directionNav" type="radio" label="DirectionNav" default="true"  class="btn-group"  size="30" description="">
                 <option value="true">Yes</option>
                 <option value="false">No</option>
             </field>
-            <field name="nivo_opacity" type="text" default="0.3" label="Overlay"/>
+            <field name="nivo_controlNav" type="radio" label="controlNav" default="true"  class="btn-group"  size="30" description="">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </field>
+            <field name="nivo_pauseOnHover" type="radio" label="NIVO_PAUSE" default="true"  class="btn-group"  size="30" description="">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </field>
+            <field name="nivo_start" type="text" default="0" label="NIVO_START"/>
         </fieldset>
 
         <fieldset

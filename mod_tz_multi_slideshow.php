@@ -2,7 +2,7 @@
 /*------------------------------------------------------------------------
     # (TZ Module, TZ Plugin, TZ Component)
     # ------------------------------------------------------------------------
-    # author    Sunland .,JSC
+    # author    Templaza .,JSC
     # copyright Copyright (C) 2011 Sunland .,JSC. All Rights Reserved.
     # @license - http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
     # Websites: http://www.TemPlaza.com

@@ -14,12 +14,23 @@ $url = JURI::base();
 
 $zoom_width = $params->get('zoom_width','840');
 $zoom_height = $params->get('zoom_height','744');
+$zoom_time = $params->get('zoom_time',6);
+$zoom_top = $params->get('zoom_top','-200');
+$zoom_right = $params->get('zoom_right','-200');
+$zoom_bottom = $params->get('zoom_bottom','-200');
+$zoom_left = $params->get('zoom_left','-200');
 
 $document   =   JFactory::getDocument();
 $document ->addStyleSheet('modules/mod_tz_multi_slideshow/css/zoomstyle2.css');
 $count_list = count($list);
-$timetotal = 6 * $count_list;
+$timetotal = $zoom_time * $count_list;
 $document->addStyleDeclaration('
+.cb-slideshow li span.even{
+    bottom: '.$zoom_bottom.'px;
+    left: '.$zoom_left.'px;
+    right: '.$zoom_right.'px;
+    top: '.$zoom_top.'px;
+}
 .cb-slideshow li span
 {
     -webkit-animation: imageAnimation '.$timetotal.'s linear infinite 0s;
@@ -44,6 +55,8 @@ $document->addStyleDeclaration('
     -ms-animation: titleAnimation '.$timetotal.'s linear infinite 0s;
     animation: titleAnimation '.$timetotal.'s linear infinite 0s;
 }
+
+
 ');
 
 ?>
@@ -60,7 +73,7 @@ $document->addStyleDeclaration('
 <?php if($list){ ?>
 <?php  $i=1;foreach ($list as $item) :
         $j= $i+1;
-        $timer = $i *6;
+        $timer = $i * $zoom_time;
         $images = JUri::base().$item->image;
         if($j <= count($list)){
             $document->addStyleDeclaration('
