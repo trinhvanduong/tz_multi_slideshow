@@ -10,6 +10,7 @@
 -------------------------------------------------------------------------*/
 // no direct access
 defined('_JEXEC') or die('Restricted access');
+
 $url = JURI::base();
 
 $tz_effect          =   $params->get('tz_effect','fade');
@@ -17,11 +18,16 @@ $tz_autoslide = $params->get('tz_autoslide');
 $tz_speed = $params->get('tz_slideSpeed','7000');
 $tz_anispeed = $params->get('tz_speed','1000');
 $tz_direction = $params->get('tz_direction_slide');
-$flex_width = $params->get('flex_width',900);
+$flex_width = $params->get('flex_width','100');
+$flex_height = $params->get('flex_height');
+$thumb_height = $params->get('thumb_height');
 $flex_thumb = $params->get('flex_thumb','true');
 $flex_width_thumb = $params->get('flex_width_thumb','300');
 $flex_bottom_thumb = $params->get('flex_bottom_thumb','-85');
 $flex_loop = $params->get('flex_loop','true');
+$units_width_Flex = $params->get('units_width_Flex');
+$units_height_Flex = $params->get('units_height_Flex');
+$units_height_Flex_thumb = $params->get('units_height_Flex');
 $document   =   JFactory::getDocument();
 $document->addStyleSheet('modules/mod_tz_multi_slideshow/css/flexslider.css');
 
@@ -34,7 +40,13 @@ $document->addStyleDeclaration('
     bottom:'.$flex_bottom_thumb.'px !important;
     }
     #tz_Flexslider{
-        width:'.$flex_width.'px;
+        width:'.$flex_width.''.$units_width_Flex.';
+    }
+    #tz_Flexslider #slider .flexslider .slides > li{
+        height: '.$flex_height.''.$units_height_Flex.';
+    }
+    #tz_Flexslider #carousel ul li img{
+    height: '.$thumb_height.''.$units_height_Flex_thumb.';
     }
 ');
 
@@ -80,10 +92,6 @@ $document->addStyleDeclaration('
                             </div>
 
                         <?php } ?>
-                            <?php if($flex_overlay == 'true'){ ?>
-                            <div class="bg-slide-overlay"></div>
-                            <?php } ?>
-
                         </div>
                     </li>
                 <?php endforeach; ?>

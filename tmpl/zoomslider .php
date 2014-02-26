@@ -12,8 +12,10 @@
 defined('_JEXEC') or die('Restricted access');
 $url = JURI::base();
 
-$zoom_width = $params->get('zoom_width','840');
+$zoom_width = $params->get('zoom_width','100');
 $zoom_height = $params->get('zoom_height','744');
+$units_width_zoom = $params->get('units_width_zoom','%');
+$units_height_zoom = $params->get('units_height_zoom','px');
 $zoom_time = $params->get('zoom_time',6);
 $zoom_top = $params->get('zoom_top','-200');
 $zoom_right = $params->get('zoom_right','-200');
@@ -64,8 +66,8 @@ $document->addStyleDeclaration('
 
 <script type="text/javascript">
     jQuery(document).ready(function(){
-        jQuery('.cb-slideshow').css('height',<?php echo $zoom_height; ?>+'px');
-        jQuery('ul.cb-slideshow').css('width',<?php echo $zoom_width; ?>+'px');
+        jQuery('.cb-slideshow').css('height',<?php echo $zoom_height; ?>+'<?php echo $units_height_zoom;?>');
+        jQuery('ul.cb-slideshow').css('width',<?php echo $zoom_width; ?>+'<?php echo $units_width_zoom;?>');
     });
 </script>
 

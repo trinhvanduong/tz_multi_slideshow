@@ -32,6 +32,7 @@ abstract class modTzMultiSlideshowHelper
         $content = $params->get('content_manager');
         $catids = $params->get('categories');
         $catid = implode(",",$catids);
+//        var_dump($catid); die();
         $order = $params->get('order');
         $orderby = $params->get('orderby');
         $limit = $params->get('limit');
@@ -48,10 +49,10 @@ abstract class modTzMultiSlideshowHelper
           WHERE ct.catid IN($catid) AND ct.state = 1 AND tzx.type = '$item_type' ORDER BY ct.$orderby $order  LIMIT $limit
           ";
         }
-//        var_dump($query); die();
+//        var_dump($catid); die();
         if($content == 'joomla_content'){
             $query =
-                "SELECT *, ct.title as artitle, ct.alias as aralias, cat.alias as category_alias
+                "SELECT *,ct.id as arid, ct.title as artitle, ct.alias as aralias, cat.alias as category_alias
             FROM #__content ct LEFT JOIN #__categories cat ON(ct.catid = cat.id)
             WHERE ct.catid IN($catid) AND ct.state = 1  ORDER BY ct.$orderby $order LIMIT $limit
             ";
@@ -59,14 +60,11 @@ abstract class modTzMultiSlideshowHelper
 
         $db -> setQuery($query);
         $items = $db->loadObjectList();
-		
-
-//        var_dump($items); die();
         if($items){
             if($content == 'tz_portfolio'){
                 foreach($items as $item){
                     $item->title = $item->artitle;
-                    $item->intro = modTzMultiSlideshowHelper::rip_tags($item->introtext);
+                    $item->intro =$item->introtext;
                     $item->slug = $item->arid.':'.$item->aralias;
                     $item->catslug = $item->catid.':'.$item->category_alias;
                     $item->link = JRoute::_(TZ_PortfolioHelperRoute::getArticleRoute($item->slug, $item->catslug));
@@ -121,15 +119,17 @@ abstract class modTzMultiSlideshowHelper
                     $item->catslug = $item->catid.':'.$item->category_alias;
 
                     $item->link = JRoute::_(ContentHelperRoute::getArticleRoute($item->slug, $item->catslug));
+                    $item->intro = modTzMultiSlideshowHelper::rip_tags($item->introtext);
 
                     if($item->images){
                         $images = new JRegistry;
                         $images->loadString($item->images);
                         $item->images;
                         $images = json_decode($item->images);
-                        $item->image_intro = $images->image_intro;
+                        $item->image_thumb = $images->image_intro;
                         $item->image = $images->image_fulltext;
 
+//                        var_dump( $item->image_thumb);die();
 //                        $item->image = modTzNewsHelper::tz_resizeImgcrop($images, $width, $height,$crop );
                     }
                 }
@@ -138,9 +138,7 @@ abstract class modTzMultiSlideshowHelper
         }
         return false;
     }
-
-
-   public static function rip_tags($string) {
+    public static function rip_tags($string) {
 
         // ----- remove HTML TAGs -----
         $string = preg_replace ('/<[^>]*>/', ' ', $string);
@@ -156,6 +154,9 @@ abstract class modTzMultiSlideshowHelper
         return $string;
 
     }
+
+
+
 
 
 

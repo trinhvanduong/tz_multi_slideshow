@@ -21,8 +21,8 @@ $intro = $params->get('introtext');
 $limittext = $params->get('limit_intro');
 $flex_thumb = $params->get('flex-thumb','true');
 
-
 $list = modTzMultiSlideshowHelper::getItemsSlideshow($params);
+//var_dump($list);die();
 
 if($list){
 require(JModuleHelper::getLayoutPath('mod_tz_multi_slideshow',$params->get('layout', 'Flexslider')));

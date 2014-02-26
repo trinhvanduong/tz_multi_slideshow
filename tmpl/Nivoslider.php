@@ -16,12 +16,13 @@ $nivo_effect =   $params->get('nivo_effect','fade');
 $nivo_speed = $params->get('nivo_speed','500');
 $nivo_pause = $params->get('nivo_pause','3000');
 $nivo_direction = $params->get('nivo_directionNav','true');
-$nivo_width = $params->get('nivo_width',1500);
+$nivo_width = $params->get('nivo_width','100%');
 $nivo_bottom = $params->get('nivo_bottom','85');
 $themes = $params->get('nivo_theme','default');
 $nivo_start = $params->get('nivo_start',0);
 $nivo_controlNav = $params->get('nivo_controlNav','true');
 $nivo_pauseOnHover = $params->get('nivo_pauseOnHover','true');
+$units_width_nivo = $params->get('units_width_nivo','%');
 
 $document   =   JFactory::getDocument();
 $document->addStyleSheet('modules/mod_tz_multi_slideshow/css/nivo-slider.css');
@@ -29,7 +30,7 @@ $document->addStyleSheet('modules/mod_tz_multi_slideshow/css/themes/'. $themes.'
 
 $document->addStyleDeclaration('
     .slider-wrapper {
-    width:'.$nivo_width.'px;
+    width:'.$nivo_width.''.$units_width_nivo.';
     }
 
 ');
