@@ -1,0 +1,127 @@
+/*** Overall MovingBoxes Slider ***/
+.mb-wrapper {
+    margin: 0 auto 20px;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    height:300px;
+    overflow: hidden;
+}
+
+/* Panel Wrapper */
+.mb-slider, .mb-scroll {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    left: 0;
+    top: 0;
+    /***(>'-')> Control Panel Font size here <('-'<)***/
+    font-size: 18px;
+
+}
+.mb-inside {
+    overflow: hidden;
+    position: relative;
+}
+
+/* active slider border highlight */
+
+
+/*** Slider panel ***/
+.mb-slider .mb-panel {
+    margin: 0;
+    padding: 20px 0;
+    display: block;
+    cursor: pointer;
+    float: left;
+    list-style: none;
+}
+.mb-inside img{
+    width: 100%;
+}
+/* Cursor to arrow over current panel, pointer for all others,
+change .current class name using plugin option, currentPanel : 'current' */
+.mb-slider .mb-panel.current {
+    cursor: auto;
+}
+
+/*** Inside the panel ***/
+#slider li{
+    overflow: hidden;
+
+}
+#slider li img {
+    width: auto;
+    max-width: none;
+}
+#slider li.current img {
+    width: auto;
+    max-width: none;
+}
+
+
+/*** Left & Right Navigation Arrows ***/
+a.mb-scrollButtons {
+    display: block;
+    width: 45px;
+    height: 58px;
+    position: absolute;
+    top: 50%;
+    margin-top: -29px; /* if you change the arrow images, you may have to adjust this (1/2 height of arrow image) */
+    cursor: pointer;
+    text-decoration: none;
+    outline: 0;
+    border: 0;
+    z-index: 99;
+}
+
+a.mb-scrollButtons.mb-left {
+    background: url("../images/prev.png") no-repeat scroll 20px -27px rgba(0, 0, 0, 0);
+    left: 0;
+}
+
+a.mb-scrollButtons.mb-right {
+    background: url("../images/next.png") no-repeat scroll -12px -25px rgba(0, 0, 0, 0);
+    right: 0;
+}
+a.mb-scrollButtons.disabled {
+    display: none;
+}
+
+/*** Controls added below the panels ***/
+.mb-controls {
+    margin: 0 auto;
+    text-align: center;
+    background: #ccc;
+    position: relative;
+    z-index: 100;
+}
+
+.mb-controls a {
+    color: #666;
+    font: 18px/2.2 Georgia, Serif;
+    display: inline-block;
+    text-decoration: none;
+    padding: 2px;
+    margin: 0 5px 0 0;
+    text-align: center;
+    outline: 0;
+}
+.tz_information {
+    left: 0;
+    position: absolute;
+}
+/*li.current .tz_information{*/
+    /*bottom: 10%;*/
+/*}*/
+@media(max-width: 767px){
+    ul#slider li.current img{
+        width: 100%;
+    }
+
+}
+

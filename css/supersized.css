@@ -28,7 +28,7 @@
     left: 0;
     top: 0;
     overflow: hidden;
-    z-index: -999;
+    z-index: 0;
     height: 100%;
     width: 100%;
     margin:0;
@@ -330,7 +330,20 @@
     100% {color: yellow;left:0px; top:0px;}
 }
 #slidecaption{
-    height: 200px;
+    height: auto;
     width: 100%;
 }
+.tz_supersized > div {
+    position: relative;
+    z-index: 10;
+}
 
+.background_overload {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: url("../images/bg-dot.png") repeat;
+    z-index: 10;
+}
