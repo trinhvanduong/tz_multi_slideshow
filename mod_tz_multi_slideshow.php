@@ -15,9 +15,7 @@ defined('_JEXEC') or die('Restricted access');
 require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'helper.php');
 
 $load = $params->get('loadjquery');
-$title = $params->get('title');
 $title_link = $params->get('title_link');
-$intro = $params->get('introtext');
 $limittext = $params->get('limit_intro');
 $flex_thumb = $params->get('flex-thumb', 'true');
 //option supersized
@@ -50,8 +48,9 @@ $audio_ogg = $params->get('slide_audio_ogg');
 $thumb_tray = $params->get('thumb_tray');
 $tz_thumb = $params->get('tz_thumb');
 $supersized_thumb_bottom = $params->get('supersized_thumb_bottom');
-$run_text = $params->get('run_text');
 $music_name = substr($audio_mp3, 0, -4);
+
+
 //Options Moving Box
 $mv_startPanel = $params->get('startPanel');
 if ($params->get('moving_loop') == 1) {
@@ -80,7 +79,7 @@ if ($load == 1) :
     $document->addScript($url . 'modules/mod_tz_multi_slideshow/js/jquery-1.10.1.min.js');
 endif;
 
-
+ 
 if ($list) {
     require(JModuleHelper::getLayoutPath('mod_tz_multi_slideshow', $params->get('layout', 'Flexslider')));
 } else {

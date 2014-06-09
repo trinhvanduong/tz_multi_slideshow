@@ -15,12 +15,10 @@ $document = JFactory::getDocument();
 $document->addStyleSheet('modules/mod_tz_multi_slideshow/css/supersized.css');
 $document->addStyleSheet('modules/mod_tz_multi_slideshow/css/supersized.shutter.css');
 $document->addStyleDeclaration('
-    #wrapper #slidecaption h2,
-    #tz_fullslide #slidecaption h2{
+    #tz_supersized .slide-des #slidecaption h2{
         background:' . $bg_title . ';
     }
-    #tz_fullslide #slidecaption1,
-    #wrapper #slidecaption1{
+    #tz_supersized .slide-des #slidecaption1 {
         background:' . $bg_intro . ';
     }
     #thumb-tray{
@@ -32,9 +30,7 @@ $document->addStyleDeclaration('
     #thumb-tray{
         bottom: ' . $supersized_thumb_bottom . 'px !important;
     }
-    #slidecaption h2{
-    animation-duration: ' . $run_text . 's;
-    }
+
 ');
 
 if ($intro == 0) {
@@ -133,6 +129,9 @@ $document->addScript($url . 'modules/mod_tz_multi_slideshow/js/buzz.js');
 
 
 </script>
+<div class="back_homepage">
+<a href="<?php echo $url; ?>">Back to homepage</a>
+</div>
 <div class="background_overload"></div>
 <div class="tz_supersized">
     <div id="tz_supersized">
@@ -141,12 +140,12 @@ $document->addScript($url . 'modules/mod_tz_multi_slideshow/js/buzz.js');
         <div id="nextthumb"></div>
         <div class="slide-des">
             <?php if ($title == 1) { ?>
-                <div id="slidecaption" class="tz-slider-title">
+                <div id="slidecaption" >
 
                 </div>
             <?php } ?>
             <?php if ($intro == 1) { ?>
-                <div id="slidecaption1" class="tz-slider-title"></div>
+                <div id="slidecaption1" ></div>
             <?php } ?>
         </div>
 

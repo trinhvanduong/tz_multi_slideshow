@@ -424,7 +424,7 @@
             </fieldset>
 
             <fieldset name="Movingbox">
-
+                <field name="moving_height" label="MOD_MOVING_HEIGHT" default="350" type="text"/>
                 <field name="startPanel"
                        type="text"
                        default="3"
@@ -514,14 +514,6 @@
                        class="btn-group"
                        size="30"/>
 
-                <field type="radio"
-                       name="run_text"
-                       default="2.5"
-                       label="Run Text"
-                       class="btn-group">
-                    <option value="2.5">Yes</option>
-                    <option value="0">No</option>
-                </field>
 
                 <field name="autoplay"
                        type="radio"
@@ -718,6 +710,8 @@
                        default=""
                        directory="images"
                        description="MOD_TZ_MUTLI_FULLSLIDE_AUDIO_OGG_DESC"/>
+                <field name="background_title" type="color" default="#ffffff" label="MOD_SUPERSIZE_BG_TITLE"/>
+                <field name="background_intro" type="color" default="#ffffff" label="MOD_SUPERSIZE_BG_INTRO"/>
             </fieldset>
 
             <fieldset name="Flexslider_Kwiks">

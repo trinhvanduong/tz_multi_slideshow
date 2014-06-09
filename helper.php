@@ -62,7 +62,7 @@ abstract class modTzMultiSlideshowHelper
         $items = $db->loadObjectList();
         if ($items) {
             if ($content == 'tz_portfolio') {
-                $param_com = JComponentHelper::getComponent('com_content')->params;
+                $param_com = JComponentHelper::getComponent('com_content')->params; $i=1;
                 foreach ($items as $item) {
                     $item->text = $item->introtext;
                     JPluginHelper::importPlugin('content');
@@ -98,8 +98,9 @@ abstract class modTzMultiSlideshowHelper
                     echo $item->event->TZafterDisplayContent;
                     $item->slug = $item->arid . ':' . $item->aralias;
                     $item->catslug = $item->catid . ':' . $item->category_alias;
+					
                     $item->link = JRoute::_(TZ_PortfolioHelperRoute::getArticleRoute($item->slug, $item->catslug));
-
+					
                     if ($item->tzimages) {
                         $images = $item->tzimages;
                         $nameimg = JFile::getExt($images);
@@ -117,6 +118,7 @@ abstract class modTzMultiSlideshowHelper
 
                         }
                     }
+					
                     if ($item->tzvideo) {
                         $images = $item->videothumb;
                         $nameimg = JFile::getExt($images);
@@ -135,6 +137,7 @@ abstract class modTzMultiSlideshowHelper
                             $item->video_id = $arrvideos[1];
                         }
                     }
+					
 
                 }
                 return $items;

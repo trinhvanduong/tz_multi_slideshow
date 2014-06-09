@@ -102,6 +102,11 @@
     height: 160px;
     box-shadow: none;
     background: rgba(255,255,255,0.2);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 #thumb-tray ul#thumb-list{
     margin:4px 0;
@@ -241,6 +246,11 @@
 #ourner-sitebar #thumb-tray{
     /*bottom: 30px !important;*/
     bottom:-100px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 #thumb-tray #thumb-back, #thumb-tray #thumb-forward {
     bottom: 50px;
@@ -248,6 +258,11 @@
     position: absolute;
     width: 41px;
     z-index: 5;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .ja-sidebar-1{
@@ -294,41 +309,11 @@
     right: 0;
     z-index: 999999;
 }
-#slidecaption h2{
-    position:relative;
-    animation-name:myfirst;
-    animation-duration:2.5s;
-    animation-timing-function:linear;
-    animation-delay:1.5s;
-    animation-iteration-count:infinite;
-    animation-direction:alternate;
-    animation-play-state:running;
-    /* Safari and Chrome: */
-    -webkit-animation-name:myfirst;
-    -webkit-animation-duration:2.5s;
-    -webkit-animation-timing-function:linear;
-    -webkit-animation-delay:1.5s;
-    -webkit-animation-iteration-count:infinite;
-    -webkit-animation-direction:alternate;
-    -webkit-animation-play-state:running;
+.tz_thumb:hover{
+    cursor: pointer;
 }
 
-@keyframes myfirst
-{
-    0%   {color: white;left:0px; top:0;}
-    25%  {color: red; left:250px; top:0;}
-    50%  {color: blue; left:250px; top:150px;}
-    75%  {color: green;left:0px; top:150px;}
-    100% {color: yellow;left:0px; top:0px;}
-}
-@-webkit-keyframes myfirst /* Safari and Chrome */
-{
-    0%   {color: #ffffff;left:0px; top:0;}
-    25%  {color: red; left:250px; top:0;}
-    50%  {color: blue; left:250px; top:150px;}
-    75%  {color: green;left:0px; top:150px;}
-    100% {color: yellow;left:0px; top:0px;}
-}
+
 #slidecaption{
     height: auto;
     width: 100%;
@@ -346,4 +331,58 @@
     width: 100%;
     background: url("../images/bg-dot.png") repeat;
     z-index: 10;
+}
+
+.back_homepage{
+position:fixed;
+top:50px;
+left:50px;
+z-index:100;
+color:#111;
+padding:5px 15px;
+background:rgba(255,255,255,0.9);
+-webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease;
+-ms-transition: all 0.3s ease;
+-o-transition: all 0.3s ease;
+transition: all 0.3s ease;
+}
+
+.back_homepage a{		
+	color:#111;
+}
+.back_homepage:hover a:hover{
+text-decoration:none;
+font-weight:bold;
+-webkit-transition: all 0.3s ease;
+-webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease;
+-ms-transition: all 0.3s ease;
+-o-transition: all 0.3s ease;
+transition: all 0.3s ease;
+}
+#tz_supersized .slide-des{
+    bottom: 30%;
+    left: 15%;
+    position: fixed;
+    right: 30%;
+    z-index: 100;
+}
+#tz_supersized .slide-des #slidecaption h2{
+    display: inline-block;
+    padding:15px 20px 17px;
+    background: rgba(255,255,255,1);
+    margin-bottom:20px;
+    color:#0099FF;
+    text-shadow: none;
+}
+#tz_supersized .slide-des #slidecaption1{
+    display:inline-block;
+    background: rgba(255,255,255,1);
+    padding:15px 20px;
+}
+#tz_supersized .slide-des #slidecaption1 p{
+    display:inline-block;
+    line-height: 1.5em;
+    margin:0;
 }

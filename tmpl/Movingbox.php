@@ -9,7 +9,16 @@
 $doc = JFactory::getDocument();
 $doc->addStyleSheet(JUri::base() . 'modules/mod_tz_multi_slideshow/css/movingbox.css');
 $doc->addScript(JUri::base() . 'modules/mod_tz_multi_slideshow/js/jquery.movingboxes.js');
+$slide_height = $params->get('moving_height',350);
+if($mv_fixheight == 'true'){
+$doc->addStyleDeclaration('
+div.mb-wrapper{height: '.$slide_height.'px;
+');
+}
+
 ?>
+
+
 <ul id="slider">
     <?php foreach ($list as $item): ?>
         <li>
