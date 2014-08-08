@@ -14,6 +14,8 @@ defined('_JEXEC') or die('Restricted access');
 // Include the syndicate functions only once
 require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'helper.php');
 
+$document	= JFactory::getDocument();
+
 $load = $params->get('loadjquery');
 $title_link = $params->get('title_link');
 $limittext = $params->get('limit_intro');
