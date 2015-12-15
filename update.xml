@@ -6,7 +6,6 @@
         <element>mod_tz_multi_slideshow</element>
         <type>module</type>
         <version>1.6</version>
-        <client>0</client>
 
         <infourl title="https://github.com/trinhvanduong/tz_multi_slideshow">https://github.com/trinhvanduong/tz_multi_slideshow</infourl>
         <downloads>
@@ -14,7 +13,7 @@
                 https://github.com/trinhvanduong/tz_multi_slideshow/archive/v1.6.zip
             </downloadurl>
         </downloads>
-        <maintainer>Test</maintainer>
+        <maintainer>TuanNA</maintainer>
         <maintainerurl>>http://www.TemPlaza.com</maintainerurl>
         <targetplatform name="joomla" version="3.[012345]"/>
     </update>
@@ -24,7 +23,6 @@
         <element>mod_tz_multi_slideshow</element>
         <type>module</type>
         <version>1.0</version>
-        <client>0</client>
 
         <infourl title="https://github.com/trinhvanduong/tz_multi_slideshow">https://github.com/trinhvanduong/tz_multi_slideshow</infourl>
         <downloads>
@@ -32,7 +30,7 @@
                 https://github.com/trinhvanduong/tz_multi_slideshow/archive/v1.0.zip
             </downloadurl>
         </downloads>
-        <maintainer>Test</maintainer>
+        <maintainer>TuanNA</maintainer>
         <maintainerurl>>http://www.TemPlaza.com</maintainerurl>
         <targetplatform name="joomla" version="3.[012345]"/>
     </update>
