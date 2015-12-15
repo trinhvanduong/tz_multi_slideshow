@@ -5,7 +5,7 @@
         <description>TZ Multiple Slideshow Module</description>
         <element>mod_tz_multi_slideshow</element>
         <type>module</type>
-        <version>1.7</version>
+        <version>1.6</version>
 
         <infourl title="https://github.com/trinhvanduong/tz_multi_slideshow">https://github.com/trinhvanduong/tz_multi_slideshow</infourl>
         <downloads>
