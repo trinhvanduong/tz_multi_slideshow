@@ -14,7 +14,7 @@
                 https://github.com/trinhvanduong/tz_multi_slideshow/archive/v1.6.zip
             </downloadurl>
         </downloads>
-        <maintainer>TuanNA</maintainer>
+        <maintainer>Test</maintainer>
         <maintainerurl>>http://www.TemPlaza.com</maintainerurl>
         <targetplatform name="joomla" version="3.[012345]"/>
     </update>
@@ -32,7 +32,7 @@
                 https://github.com/trinhvanduong/tz_multi_slideshow/archive/v1.0.zip
             </downloadurl>
         </downloads>
-        <maintainer>TuanNA</maintainer>
+        <maintainer>Test</maintainer>
         <maintainerurl>>http://www.TemPlaza.com</maintainerurl>
         <targetplatform name="joomla" version="3.[012345]"/>
     </update>
