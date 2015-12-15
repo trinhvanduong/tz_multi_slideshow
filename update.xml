@@ -16,8 +16,7 @@
         <tags>
             <tag>stable</tag>
         </tags>
-        <section>Updates</section>
-        <maintainer>TZFlickStream</maintainer>
+        <maintainer>TZMultiSlideshow</maintainer>
         <maintainerurl>https://github.com/trinhvanduong/tz_multi_slideshow</maintainerurl>
         <targetplatform name="joomla" version="3.[012345]"/>
     </update>
@@ -37,8 +36,7 @@
         <tags>
             <tag>stable</tag>
         </tags>
-        <section>Updates</section>
-        <maintainer>TZFlickStream</maintainer>
+        <maintainer>TZMultiSlideshow</maintainer>
         <maintainerurl>https://github.com/trinhvanduong/tz_multi_slideshow</maintainerurl>
         <targetplatform name="joomla" version="3.[012345]"/>
     </update>
