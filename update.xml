@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<updates>
+    <update>
+        <name>TZMultiSlideshow</name>
+        <description>TZ Multiple Slideshow Module</description>
+        <element>mod_tz_multi_slideshow</element>
+        <type>module</type>
+        <version>1.6</version>
+
+        <infourl title="https://github.com/trinhvanduong/tz_multi_slideshow">https://github.com/trinhvanduong/tz_multi_slideshow</infourl>
+        <downloads>
+            <downloadurl type="full" format="zip">
+                https://github.com/trinhvanduong/tz_multi_slideshow/archive/v1.6.zip
+            </downloadurl>
+        </downloads>
+        <tags>
+            <tag>stable</tag>
+        </tags>
+        <section>Updates</section>
+        <maintainer>TZFlickStream</maintainer>
+        <maintainerurl>https://github.com/trinhvanduong/tz_multi_slideshow</maintainerurl>
+        <targetplatform name="joomla" version="3.[012345]"/>
+    </update>
+    <update>
+        <name>TZMultiSlideshow</name>
+        <description>TZ Multiple Slideshow Module</description>
+        <element>mod_tz_multi_slideshow</element>
+        <type>module</type>
+        <version>1.0</version>
+
+        <infourl title="https://github.com/trinhvanduong/tz_multi_slideshow">https://github.com/trinhvanduong/tz_multi_slideshow</infourl>
+        <downloads>
+            <downloadurl type="full" format="zip">
+                https://github.com/trinhvanduong/tz_multi_slideshow/archive/v1.0.zip
+            </downloadurl>
+        </downloads>
+        <tags>
+            <tag>stable</tag>
+        </tags>
+        <section>Updates</section>
+        <maintainer>TZFlickStream</maintainer>
+        <maintainerurl>https://github.com/trinhvanduong/tz_multi_slideshow</maintainerurl>
+        <targetplatform name="joomla" version="3.[012345]"/>
+    </update>
+</updates>
